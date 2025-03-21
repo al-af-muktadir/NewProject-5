@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
-import img from "@/assests/img.png";
+// import Image from "next/image";
+// import img from "@/assests/img.png";
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FaDownload } from "react-icons/fa";
@@ -56,13 +56,13 @@ const Body = () => {
         </a>
       </div>
 
-      <Image
+      {/* <Image
         ref={photoRef}
         width={300}
         height={500}
         src={img}
         alt="Picture of the author"
-      />
+      /> */}
     </div>
   );
 };
