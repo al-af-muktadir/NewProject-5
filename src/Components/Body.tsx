@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import img from "../assests/img.png";
+import img from "@/assests/img.png";
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FaDownload } from "react-icons/fa";
