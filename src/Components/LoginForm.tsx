@@ -19,7 +19,7 @@ const LoginForm = () => {
             type="button"
             onClick={() =>
               signIn("google", {
-                callbackUrl: "http://localhost:3000/dashboard",
+                callbackUrl: "https://new-project-5-etk7.vercel.app/dashboard",
               })
             }
             className="w-full p-3 bg-red-500 text-white rounded-lg flex justify-center items-center gap-2 hover:bg-red-600 transition duration-300"
