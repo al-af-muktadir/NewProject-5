@@ -31,7 +31,7 @@ export const FuturisticCard = ({ project }: { project: TProject }) => {
           {project.description.slice(0, 37)}
         </p>
         <motion.a
-          href={`projects/${project._id}`}
+          href={`project/${project._id}`}
           target="_blank"
           className="mt-6 inline-block bg-blue-500/80 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg"
           whileHover={{ scale: 1.1 }}

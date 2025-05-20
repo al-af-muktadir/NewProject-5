@@ -4,8 +4,9 @@ import "./globals.css";
 import NavBar from "@/Components/NavBar";
 
 import Providers from "@/lib/Providers/Providers";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/utils/authOptions";
+import { Toaster } from "sonner";
+// import { getServerSession } from "next-auth";
+// import { authOptions } from "@/utils/authOptions";
 
 const Noto = Noto_Serif({
   weight: "300",
@@ -22,7 +23,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession(authOptions);
   return (
     <html lang="en">
       <body
@@ -31,10 +31,11 @@ export default async function RootLayout({
       >
         <Providers>
           <div className="absolute top-0 z-[-2] h-screen w-full text-white"></div>
-          <NavBar session={session} />
+          <NavBar />
           {children}
         </Providers>
       </body>
+      <Toaster />
     </html>
   );
 }

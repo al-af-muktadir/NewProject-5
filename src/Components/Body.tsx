@@ -1,9 +1,10 @@
 "use client";
 // import Image from "next/image";
-// import img from "@/assests/img.png";
+import img from "@/assests/img.png";
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FaDownload } from "react-icons/fa";
+import Image from "next/image";
 
 const Body = () => {
   const oneRef = useRef<HTMLDivElement | null>(null);
@@ -32,7 +33,7 @@ const Body = () => {
   }, []);
 
   return (
-    <div className="flex w-[90%] mx-auto items-center justify-center gap-10 flex-wrap">
+    <div className="flex w-[90%] mx-auto items-center mt-24 justify-center gap-10 flex-wrap">
       <div ref={oneRef}>
         <h1 className="text-4xl font-extrabold">
           <span>Hi</span>, I&apos;m{" "}
@@ -56,13 +57,13 @@ const Body = () => {
         </a>
       </div>
 
-      {/* <Image
+      <Image
         ref={photoRef}
         width={300}
         height={500}
         src={img}
         alt="Picture of the author"
-      /> */}
+      />
     </div>
   );
 };

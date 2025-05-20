@@ -4,9 +4,11 @@ import { usePostMessageMutation } from "@/redux/apis/MessageApi";
 import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { toast } from "sonner";
 
 const Form = () => {
   const [postData, { data }] = usePostMessageMutation();
+  // const [submitting, isSubmitting] = useState(false);
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const name = e.currentTarget.name.value;
@@ -18,15 +20,18 @@ const Form = () => {
       message,
     };
     postData(user);
+    // isSubmitting(true);
+    console.log(data);
     if (data?.success) {
-      alert("Messeage Sent Succesgully");
+      toast.success("Messeage Sent Succesfully");
+      // isSubmitting(false);
     } else {
-      alert("SomeThing Went Wrong Please Try Again");
+      toast.success("Something went Wrongs");
     }
   };
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center p-6 bg-gray-900">
+      <div className="min-h-screen flex items-center justify-center p-6 ">
         <div className="bg-transparent border border-gray-700 rounded-2xl shadow-xl max-w-lg w-full backdrop-blur-lg p-6">
           <h2 className="text-3xl flex items-center gap-10 justify-between font-extrabold text-white text-center">
             Contact Us{" "}

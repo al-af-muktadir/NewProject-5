@@ -50,7 +50,8 @@ export const ThreeDCardDemo = ({ project }: { project: TProject }) => {
             translateZ="60"
             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
           >
-            {project.description}
+            {project.description.slice(0, 50)}{" "}
+            <p className="font-bold">click on details to see more ...</p>
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
             <Image
@@ -61,15 +62,6 @@ export const ThreeDCardDemo = ({ project }: { project: TProject }) => {
               alt="thumbnail"
             />
           </CardItem>
-          <div className="flex justify-between items-center mt-20">
-            <CardItem
-              translateZ={20}
-              as="button"
-              className="px-4 py-2 rounded-xl border-b-2 border-r-2 border-blue-400 bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-            >
-              Details
-            </CardItem>
-          </div>
         </CardBody>
       </CardContainer>
     </div>

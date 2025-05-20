@@ -32,9 +32,9 @@ const Cards = () => {
               <ThreeDCardDemo key={idx} project={proj} />
             ))}
           </div>
-          <div className="mx-auto mr-8 flex flex-row-reverse">
+          <div className="mx-auto -mt-10 mb-8  justify-center flex flex-row-reverse">
             {" "}
-            <Link href="/projects">
+            <Link href="/project">
               <button className="border-b-2 border-r-2 flex items-center px-2 py-3 rounded-md border-blue-400">
                 See More <FaArrowRight />
               </button>

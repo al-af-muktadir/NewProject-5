@@ -125,12 +125,6 @@ type Tuser = {
   };
 };
 const DashboardComp = ({ user }: { user: Tuser | null }) => {
-  // const [activeSection, setActiveSection] = useState("manageProjects");
-  // const [openDropdown, setOpenDropdown] = useState(null);
-  // console.log(user);
-  // const toggleDropdown = (menu: any) => {
-  //   setOpenDropdown(openDropdown === menu ? null : menu);
-  // };
   const router = useRouter();
   const handleNavigate = (r: any) => {
     router.push(r);
